@@ -1,7 +1,7 @@
 ###
 # Activate PHP
 ###
-# activate :php
+activate :php
 
 
 ###
