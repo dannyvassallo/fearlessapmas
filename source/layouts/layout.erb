@@ -7,14 +7,53 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
-
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
+
+    <!--== Layout ==-->
     <%= yield %>
+
+
+    <!--== Scripts ==-->
+    <%= javascript_include_tag :all %>
+    <script src="/javascripts/jquery.social.stream.1.5.9.min.js"></script>
+    <script src="/javascripts/jquery.social.stream.wall.1.6.js"></script>
+    <script src="/javascripts/social-wall.js"></script>
+    <script src="/javascripts/sharecontest-v1.js"></script>
+    <script>
+      // init contest //
+      $("#contest").shareContestFB({
+        context: {
+          fbAppId: "829275353831386",
+          fbShareTitle: "GET LOST, FIND YOURSELF TOUR 2015 SWEEPSTAKES",
+          fbShareLink: "http://chunknocaptainchunk.com",
+          fbImageUrl: "https://s3.amazonaws.com/myfangate.com/cncctour/cncctourshare.jpg",
+          fbSubText: "http://chunknocaptainchunk.com",
+          fbDialog: "ENTER TO WIN A PRIZE BUNDLE FROM THE GET LOST, FIND YOURSELF TOUR 2015!",
+          formActionUrlId: "1qZ1dr_DdpK6FkSjtnsHLIzVZvTyZiWW3jXAXDPWt8Tw",
+          firstNameId: "749925490",
+          lastNameId: "453795809",
+          emailId: "1493557255",
+          optInId: "583147646",
+          rulesId: "1082888376",
+          fbCheckId: "701792494",
+          twitterCheckId: "1730686214",
+          contactName: "Fearless Records",
+          rulesLink: "http://google.com",
+          thankYouMsg: "Thanks for entering!",
+        }
+      });
+
+      $(function(){
+        $('.navbar').on('click', function(){
+          document.getElementById('scroller').scrollIntoView();
+        });
+      });
+    </script>
   </body>
 </html>

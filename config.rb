@@ -1,4 +1,10 @@
 ###
+# Activate PHP
+###
+# activate :php
+
+
+###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -21,9 +27,9 @@ page '/*.txt', layout: false
 ###
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -35,8 +41,8 @@ page '/*.txt', layout: false
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end
