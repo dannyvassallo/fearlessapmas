@@ -3,7 +3,7 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Fearless APMA" %></title>
@@ -16,12 +16,13 @@
   <body class="<%= page_classes %>">
 
     <!--== Layout ==-->
-
-    <%= yield %>
-    <%= partial "partials/fearlessnominees" %>
-    <%= partial "partials/contest" %>
-    <%= partial "partials/social-wall" %>
-    <%= partial "partials/footer" %>
+    <div style="overflow-x: hidden !important;" id="body-wrap">
+      <%= yield %>
+      <%= partial "partials/fearlessnominees" %>
+      <%= partial "partials/contest" %>
+      <%= partial "partials/social-wall" %>
+      <%= partial "partials/footer" %>
+    </div>
     <!--== Scripts ==-->
     <%= javascript_include_tag :all %>
     <script src="/javascripts/jquery.social.stream.1.5.9.min.js"></script>

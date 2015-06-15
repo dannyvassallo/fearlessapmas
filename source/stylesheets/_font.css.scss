@@ -3,47 +3,47 @@ h1,h2,h3,h4,blockquote,pre{
   text-transform: uppercase;
 }
 .not-caps{
-  text-transform: none !important;
+  text-transform: none;
 }
 h1 {
-  font-family: 'Alfa Slab One', cursive !important;
-  font-size: 30px !important;
-  font-style: normal !important;
-  font-variant: normal !important;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
   margin: 0 auto;
 }
 h2 {
-  font-family: 'Alfa Slab One', cursive !important;
-  font-size: 22px !important;
-  font-style: normal !important;
-  font-variant: normal !important;
-  color: black !important;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  color: black;
 }
 h3 {
-  font-family: 'Alfa Slab One', cursive !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-variant: normal !important;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
 }
 p {
-  font-family: 'Open Sans', sans-serif !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-variant: normal !important;
-  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
   color: black;
 }
 blockquote {
-  font-family: 'Open Sans', sans-serif !important;
-  font-size: 21px !important;
-  font-style: normal !important;
-  font-variant: normal !important;
-  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
 }
 pre {
-  font-family: 'Open Sans', sans-serif !important;
-  font-size: 13px !important;
-  font-style: normal !important;
-  font-variant: normal !important;
-  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
 }
