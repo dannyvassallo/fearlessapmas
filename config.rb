@@ -1,7 +1,7 @@
 ###
 # Activate PHP
 ###
-activate :php
+# activate :php
 
 
 ###
@@ -42,7 +42,7 @@ end
 configure :build do
   # Minify CSS on build
   activate :minify_css
-
+  activate :php
   # Minify Javascript on build
   activate :minify_javascript
 end
