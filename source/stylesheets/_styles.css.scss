@@ -48,13 +48,31 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/redgrunge.jpg);
   z-index: 1;
 }
+.vote-overlay{
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(238, 27, 36, 0.7);
+  h1{
+    color: black;
+    font-size: 50px;
+  }
+}
 
 .flag::after, .flag::before{
   content: ' ';
   position: relative;
   width: 1170px;
   height: 50px;
-  background-color: white;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
   left: -15px;
   -ms-transform: skewY(2deg);
   -webkit-transform: skewY(2deg);
@@ -73,7 +91,8 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   position: relative;
   width: 1170px;
   height: 50px;
-  background-color: white;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
   left: -15px;
   -ms-transform: skewY(2deg);
   -webkit-transform: skewY(2deg);
@@ -86,7 +105,8 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   position: relative;
   width: 1170px;
   height: 50px;
-  background-color: white;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
   left: -15px;
   -ms-transform: skewY(2deg);
   -webkit-transform: skewY(2deg);
@@ -137,7 +157,8 @@ nav {
 
 
 #header .container{
-  background-color: #fff;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
 }
 #header h1{
   margin: 100px auto 10px auto;
@@ -156,7 +177,8 @@ nav {
   display: block;
 }
 #nominees .main{
-  background-color: white;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
 }
 
 .artist-image{
@@ -258,6 +280,12 @@ nav {
   .nominee span{
     display: block;
   }
+  span.breaker{
+    .not-caps{
+      display: inline !important;
+    }
+    display: inline !important;
+  }
 }
 @media(max-width: 320px){
   .header{
@@ -270,23 +298,28 @@ nav {
 // Contest
 
 .contest .container{
-  background-color: white;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
 }
 .enter-here{
   color: black !important;
   font-size: 40px !important;
 }
-
+// community
+.join{
+  margin-bottom: 50px;
+}
 // footer
 
 .footer{
-  background-color: white !important;
+  background-image: url(https://s3.amazonaws.com/myfangate.com/fearlessapmas/paper.jpg);
+  background-repeat: repeat;
   margin-top: 100px;
 }
 
 .breathing1 {
-    -webkit-animation: breathing 15s ease-out infinite normal;
-    animation: breathing 15s ease-out infinite normal;
+    -webkit-animation: breathing 30s ease-out infinite normal;
+    animation: breathing 30s ease-out infinite normal;
     -webkit-font-smoothing: antialiased;
     }
 
@@ -302,11 +335,15 @@ nav {
     transform: scale(1.1);
   }
 
-  60% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
 
+  75% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -326,12 +363,17 @@ nav {
     transform: scale(1.1);
   }
 
-  60% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+  50% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
 
+  75% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   100% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -340,56 +382,76 @@ nav {
 }
 
 .breathing2 {
-    -webkit-animation: breathing 15s ease-out infinite normal;
-    animation: breathingb 15s ease-out infinite normal;
+    -webkit-animation: breathing 30s ease-out infinite normal;
+    animation: breathingb 30s ease-out infinite normal;
     -webkit-font-smoothing: antialiased;
     }
 
 
 @-webkit-keyframes breathingb {
   0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  25% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 
-  25% {
+  50% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
 
-  60% {
+  75% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-
   100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
 @keyframes breathingb {
   0% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  25% {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
 
-  25% {
+  50% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
   }
 
-  60% {
+  75% {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
-
   100% {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
+}
+
+
+// Contest Custom
+
+#contest-wrapper .contest-btn{
+  font-family: 'Alfa Slab One', cursive !important;
+  padding: 10px 10px !important;
+  background-color: $red !important;
+  border-radius: 0px !important;
+  border: solid 1px #CF0000 !important;
 }
